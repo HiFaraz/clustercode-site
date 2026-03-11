@@ -71,14 +71,17 @@ export default function Home() {
           <div>
             <PhoneMockup>
               <ClaudeMessage>
-                I&apos;ve queued your fix for the auth bug. Running tests now...
+                Task dispatched. I&apos;ll monitor it.
               </ClaudeMessage>
-              <StepsIndicator label="3 steps" />
-              <div className="mt-4 p-3 bg-white rounded-xl border border-stone-200">
-                <div className="text-xs text-stone-500 mb-1">Resuming with partial progress</div>
-                <div className="text-sm font-medium">Auth middleware updated, running integration tests</div>
+              <StepsIndicator label="2 steps" />
+              <ClaudeMessage>
+                It hit max turns before finishing. Let me resume it with the partial progress.
+              </ClaudeMessage>
+              <StepsIndicator label="Run command" />
+              <div className="text-[17px] leading-relaxed text-stone-400 mt-3">
+                Tests passing. Pushing to...
               </div>
-              <UsageBanner percent={90} resetTime="in 2 hours" />
+              <UsageBanner percent={90} resetTime="at 3:00 pm" />
             </PhoneMockup>
           </div>
         </div>
@@ -148,18 +151,8 @@ export default function Home() {
                   <td className="text-center py-4 px-4 text-stone-400">—</td>
                   <td className="text-center py-4 px-4 text-green-600">✓</td>
                 </tr>
-                <tr className="border-b border-border">
-                  <td className="py-4 px-4">Bring your own API key</td>
-                  <td className="text-center py-4 px-4 text-stone-400">—</td>
-                  <td className="text-center py-4 px-4 text-green-600">✓</td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="py-4 px-4">Git push from phone</td>
-                  <td className="text-center py-4 px-4 text-stone-400">—</td>
-                  <td className="text-center py-4 px-4 text-green-600">✓</td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="py-4 px-4">Works while you sleep</td>
+                <tr className="border-b border-border bg-amber-50">
+                  <td className="py-4 px-4 font-medium">Autonomous failure recovery</td>
                   <td className="text-center py-4 px-4 text-stone-400">—</td>
                   <td className="text-center py-4 px-4 text-green-600">✓</td>
                 </tr>
@@ -279,52 +272,30 @@ export default function Home() {
             <div>
               <PhoneMockup>
                 <ClaudeMessage>
-                  Starting codebase review with 6 agents...
+                  Dispatched. 6 subagents reviewing architecture, errors, style, testing, security, and performance.
                 </ClaudeMessage>
-                <div className="mt-3 space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span>Agent 1: API routes</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span>Agent 2: Database layer</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span>Agent 3: Auth middleware</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full" />
-                    <span>Agent 4: Waiting...</span>
-                  </div>
-                </div>
-                <StepsIndicator label="Reviewing 4 modules" />
+                <StepsIndicator label="2 steps" />
+                <ClaudeMessage>
+                  Review complete. Score: 6.6/10. Three P0 issues. Want me to fix them?
+                </ClaudeMessage>
               </PhoneMockup>
               <p className="text-center text-muted text-sm mt-4">
-                Dispatch: &quot;Review the entire codebase for security issues&quot;
+                Dispatch: &quot;Review the entire codebase&quot;
               </p>
             </div>
             <div>
               <PhoneMockup>
                 <ClaudeMessage>
-                  Review complete. Spawned 8 fix agents.
+                  8 agents working: symlink fix, task pruning, code dedup, path validation, audit logging, dead code, constants, OAuth.
                 </ClaudeMessage>
-                <div className="mt-3 p-3 bg-green-50 rounded-xl border border-green-200">
-                  <div className="text-sm font-medium text-green-800">22 files updated</div>
-                  <div className="text-xs text-green-600 mt-1">
-                    Fixed SQL injection, XSS, auth bypass
-                  </div>
-                </div>
-                <div className="mt-3 p-3 bg-white rounded-xl border border-stone-200">
-                  <div className="text-xs text-stone-500">Latest action</div>
-                  <div className="text-sm font-medium">Pushed to main</div>
-                  <div className="text-xs text-muted mt-1">2 minutes ago</div>
-                </div>
-                <UsageBanner percent={75} resetTime="in 4 hours" />
+                <StepsIndicator label="4 steps" />
+                <ClaudeMessage>
+                  All 8 done. 22 files, +956/-642 lines. Tests passing. Pushed to main.
+                </ClaudeMessage>
+                <UsageBanner percent={72} resetTime="at 3:00 pm" />
               </PhoneMockup>
               <p className="text-center text-muted text-sm mt-4">
-                Results: Issues found, fixed, and pushed—all while you slept
+                Results: 8 parallel refactors completed and merged
               </p>
             </div>
           </div>
@@ -344,7 +315,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Phone-First Dev</h3>
               <p className="text-muted">
-                Full Claude Code experience on your phone. Dispatch tasks, review diffs, approve merges.
+                Dispatch tasks, review diffs, push code — all from the Claude mobile app. Not just viewing what&apos;s happening, but directing a fleet of AI workers from your pocket.
               </p>
             </div>
 
@@ -356,7 +327,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Parallel Execution</h3>
               <p className="text-muted">
-                Run multiple Claude agents simultaneously. Review, fix, test—all at once.
+                Run 15 Claude Code instances simultaneously on isolated git worktrees. Each task gets its own branch. Two features built at once, zero collision risk.
               </p>
             </div>
 
@@ -369,7 +340,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Agent Babysitting</h3>
               <p className="text-muted">
-                Claude monitors and resumes stalled agents. No more 3am wake-ups for stuck builds.
+                Claude dispatches tasks, sleeps while they run, polls for status, handles timeouts, resumes failures automatically, and reports back. You don&apos;t manage processes — Claude does.
               </p>
             </div>
 
@@ -381,7 +352,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Your Infrastructure</h3>
               <p className="text-muted">
-                Dedicated VM with your environment. Install anything. Full root access.
+                Dedicated VM you control. Hardened systemd sandboxing, symlink-safe path validation, NoNewPrivileges process isolation. Your code never touches shared infrastructure.
               </p>
             </div>
 
@@ -393,7 +364,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Process Monitoring</h3>
               <p className="text-muted">
-                See CPU, memory, logs for every process. Full visibility into what agents are doing.
+                See the full process tree for every running task: per-process CPU, memory, I/O, and child processes. Watch docker builds, go compiles, and npm installs in real time. No more blank screens during long builds.
               </p>
             </div>
 
@@ -405,7 +376,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Audit Trail</h3>
               <p className="text-muted">
-                Every command, every file change, every decision logged. Full accountability.
+                Every task, every prompt, every completion logged to persistent JSONL. Suspicious prompt detection flags dangerous patterns. Query by time range, event type, or task ID. SOC 2 ready.
               </p>
             </div>
 
@@ -417,7 +388,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Bring Your Subscription</h3>
               <p className="text-muted">
-                Use your Claude Max subscription or API key. No middleman, no markup.
+                No additional API costs. Cluster Code runs Claude Code instances using your existing Max 20 subscription. You&apos;re already paying $200/month — we make it work 3x harder for $49 more.
               </p>
             </div>
 
@@ -429,7 +400,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Always On</h3>
               <p className="text-muted">
-                Your VM runs 24/7. Start a build before bed, wake up to a PR.
+                Your laptop sleeps. The VM doesn&apos;t. Start a build at 10pm, check results at 6am. The VM has been up for 29 hours straight during our testing. Work continues without you.
               </p>
             </div>
           </div>
@@ -597,11 +568,11 @@ export default function Home() {
               </div>
               <div className="text-stone-400">
                 <div className="text-green-400">$ git clone {siteConfig.github}</div>
-                <div className="mt-2 text-green-400">$ cd vmcode</div>
-                <div className="mt-2 text-green-400">$ npm install</div>
-                <div className="mt-2 text-green-400">$ npm run build</div>
-                <div className="mt-2 text-green-400">$ npm start</div>
-                <div className="mt-4 text-stone-500"># Server running on http://localhost:3000</div>
+                <div className="mt-2 text-green-400">$ cd vmcode && make build</div>
+                <div className="mt-2 text-green-400">$ sudo cp cluster-code /usr/local/bin/</div>
+                <div className="mt-2 text-green-400">$ sudo systemctl enable --now cluster-code</div>
+                <div className="mt-4 text-stone-500"># Add MCP connector URL to Claude.ai</div>
+                <div className="mt-2 text-stone-500"># Start building from your phone</div>
               </div>
             </div>
           </div>
