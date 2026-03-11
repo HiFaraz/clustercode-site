@@ -71,17 +71,17 @@ export default function Home() {
           <div>
             <PhoneMockup>
               <ClaudeMessage>
-                Task dispatched. I&apos;ll monitor it.
+                Found the issue — the email validation regex was rejecting addresses with plus signs. I&apos;ve updated the validator and added test cases.
               </ClaudeMessage>
-              <StepsIndicator label="2 steps" />
+              <StepsIndicator label="3 steps" />
               <ClaudeMessage>
-                It hit max turns before finishing. Let me resume it with the partial progress.
+                Tests passing. Pushed the fix to main.
               </ClaudeMessage>
               <StepsIndicator label="Run command" />
-              <div className="text-[17px] leading-relaxed text-stone-400 mt-3">
-                Tests passing. Pushing to...
+              <div className="text-[17px] leading-relaxed text-stone-400 mt-3 bg-gradient-to-b from-stone-400 to-transparent bg-clip-text text-transparent">
+                The deploy pipeline should pick it up auto...
               </div>
-              <UsageBanner percent={90} resetTime="at 3:00 pm" />
+              <UsageBanner percent={62} resetTime="at 3:00 pm" />
             </PhoneMockup>
           </div>
         </div>
