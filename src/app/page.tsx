@@ -5,6 +5,7 @@ import {
   PhoneMockup,
   ClaudeMessage,
   StepsIndicator,
+  UserMessage,
   UsageBanner,
 } from "@/components/phone-mockup";
 
@@ -70,18 +71,16 @@ export default function Home() {
           </div>
           <div>
             <PhoneMockup>
+              <UserMessage>Fix the login bug on the signup page</UserMessage>
               <ClaudeMessage>
-                Found the issue — the email validation regex was rejecting addresses with plus signs. I&apos;ve updated the validator and added test cases.
+                Found the issue — the email validation regex was rejecting valid addresses with plus signs. Fixed and pushed.
               </ClaudeMessage>
               <StepsIndicator label="3 steps" />
-              <ClaudeMessage>
-                Tests passing. Pushed the fix to main.
-              </ClaudeMessage>
-              <StepsIndicator label="Run command" />
-              <div className="text-[17px] leading-relaxed text-stone-400 mt-3 bg-gradient-to-b from-stone-400 to-transparent bg-clip-text text-transparent">
-                The deploy pipeline should pick it up auto...
+              <div className="bg-white border border-stone-200 rounded-xl p-3 w-full">
+                <div className="text-xs text-stone-400 mb-1">main · 2 minutes ago</div>
+                <div className="font-semibold text-sm mb-1">fix: email validation regex for plus signs</div>
+                <div className="text-xs text-stone-400">+3 −1 · src/auth/validate.ts</div>
               </div>
-              <UsageBanner percent={62} resetTime="at 3:00 pm" />
             </PhoneMockup>
           </div>
         </div>

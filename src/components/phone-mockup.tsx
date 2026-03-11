@@ -43,7 +43,7 @@ export function PhoneMockup({ children }: PhoneMockupProps) {
         </div>
 
         {/* Chat area */}
-        <div className="min-h-[400px] p-4 space-y-3">
+        <div className="min-h-[400px] p-4 space-y-3 flex flex-col items-start">
           {children}
         </div>
 
@@ -85,6 +85,14 @@ export function ClaudeMessage({ children }: ClaudeMessageProps) {
 
 interface StepsIndicatorProps {
   label: string;
+}
+
+export function UserMessage({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="self-end max-w-[85%] bg-purple-50 px-4 py-2.5 rounded-2xl rounded-br-sm text-[17px] leading-relaxed">
+      {children}
+    </div>
+  );
 }
 
 export function StepsIndicator({ label }: StepsIndicatorProps) {
